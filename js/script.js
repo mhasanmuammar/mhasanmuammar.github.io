@@ -72,15 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
     heroTitle.replaceWith(replacement);
   }
 
-  // The About section should read as a single editorial column. The
-  // previous oversized statement duplicated the same positioning message.
-  const about = document.querySelector("#about");
-  const aboutGrid = about?.querySelector(":scope > .container");
-  const aboutIntroColumn = aboutGrid?.querySelector(":scope > div:first-child");
-  aboutIntroColumn?.remove();
-
-  const redundantLead = about?.querySelector(".section-content > p.lead:first-child");
-  redundantLead?.remove();
+  // The About section now uses a sticky TOC + content grid layout.
+  // Smooth-scroll and active-link highlighting are handled below.
 
   const refinementStyles = document.createElement("style");
   refinementStyles.textContent = `
@@ -117,16 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
       object-fit: cover;
     }
 
-    #about .section-grid {
-      display: block;
-      max-width: 900px;
-    }
-
-    #about .section-content {
-      width: 100%;
-      max-width: 760px;
-    }
-
     @media (max-width: 820px) {
       .hero h2 {
         font-size: clamp(2.5rem, 12vw, 4.8rem);
@@ -150,4 +133,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   `;
   document.head.appendChild(refinementStyles);
+
+  const tocLinks = document.querySelectorAll(".about-toc a");
+  const tocSections = Array.from(tocLinks).map((link) =>
+    document.querySelector(link.getAttribute("href"))
+  );
+
+  function updateActiveToc() {
+    if (tocSections.length === 0) return;
+    let index = tocSections.length - 1;
+    const scrollY = window.scrollY;
+    const offset = 200;
+    for (let i = 0; i < tocSections.length; i++) {
+      const rect = tocSections[i].getBoundingClientRect();
+      if (rect.top < offset) index = i;
+    }
+    tocLinks.forEach((link, i) => {
+      link.classList.toggle("active", i === index);
+    });
+  }
+
+  let tocTick = false;
+  window.addEventListener("scroll", () => {
+    if (!tocTick) {
+      tocTick = true;
+      requestAnimationFrame(() => {
+        updateActiveToc();
+        tocTick = false;
+      });
+    }
+  });
+  updateActiveToc();
+
+  tocLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const target = document.querySelector(link.getAttribute("href"));
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  });
 });

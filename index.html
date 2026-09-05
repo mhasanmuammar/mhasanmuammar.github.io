@@ -46,10 +46,10 @@
         <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
         <div class="lang-switcher" role="group" aria-label="Language">
-          <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
-          <button type="button" class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
-          <button type="button" class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
-          <button type="button" class="lang-btn" data-lang="bn" aria-label="বাংলা">BN</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="English"><span class="lang-flag">🇬🇧</span>English</button>
+          <button type="button" class="lang-btn" data-lang="ar" aria-label="العربية"><span class="lang-flag">🇸🇦</span>العربية</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-label="Indonesia"><span class="lang-flag">🇮🇩</span>Indonesia</button>
+          <button type="button" class="lang-btn" data-lang="bn" aria-label="বাংলা"><span class="lang-flag">🇧🇩</span>বাংলা</button>
         </div>
       </nav>
     </div>
@@ -92,196 +92,218 @@
     <!-- ── About ── -->
     <section id="about" class="section">
       <div class="container section-grid">
-        <div>
+        <div class="about-toc-wrapper">
           <p class="section-number" data-i18n="about.number">01 / About</p>
-          <h2 data-i18n="about.title">Building practical learning experiences at the intersection of education, technology and creativity.</h2>
+          <nav class="about-toc" aria-label="On-page navigation">
+            <a href="#about-bio" data-i18n="about.tocBio">Background</a>
+            <a href="#about-work" data-i18n="about.tocWork">What I Do</a>
+            <a href="#about-experience" data-i18n="about.tocExperience">Experience</a>
+            <a href="#about-lumma" data-i18n="about.tocLumma">Lumma Studio</a>
+            <a href="#about-tech" data-i18n="about.tocTech">Technical Skills</a>
+            <a href="#about-languages" data-i18n="about.tocLanguages">Languages</a>
+            <a href="#about-academic" data-i18n="about.tocAcademic">Academic</a>
+            <a href="#about-future" data-i18n="about.tocFuture">Building Towards</a>
+            <a href="#about-approach" data-i18n="about.tocApproach">Approach</a>
+            <a href="#about-personal" data-i18n="about.tocPersonal">Personal</a>
+          </nav>
         </div>
 
         <div class="section-content">
-          <p class="lead" data-i18n="about.lead">
-            I currently hold two undergraduate degrees in Islamic Studies and have long experience
-            teaching language and Islamic Studies subjects for children.
-          </p>
-          <p data-i18n="about.body">
-            My work sits at the intersection of language learning, Islamic education, and thoughtful
-            content. I am particularly interested in making Classical Arabic, spoken English, Qur'an
-            recitation, and foundational Islamic learning accessible and engaging for young learners
-            and families.
-          </p>
+          <!-- ── Background ── -->
+          <div id="about-bio" class="about-block">
+            <p class="lead" data-i18n="about.lead">
+              I currently hold an undergraduate degree in Da'wah & Islamic Studies and have long experience
+              teaching language and Islamic Studies subjects.
+            </p>
+            <p data-i18n="about.body">
+              My work sits at the intersection of language learning, Islamic education, and thoughtful
+              content. I am particularly interested in making Classical Arabic, spoken English, Qur'an
+              recitation, and foundational Islamic learning accessible and engaging for young learners
+              and families.
+            </p>
+          </div>
 
-          <hr class="divider">
+          <!-- ── What I Do ── -->
+          <div id="about-work" class="about-block">
+            <h3 data-i18n="about.whatIDoTitle">What I Do</h3>
+            <p class="lead" data-i18n="about.whatIDoLead">
+              My work combines educational thinking with practical digital skills. I develop ideas into usable
+              content, products and digital experiences rather than treating education, technology and creativity
+              as separate areas.
+            </p>
+            <p data-i18n="about.languageWork">
+              A major part of my work is language learning. I work with English, Arabic and Bangla and have
+              experience teaching introductory Classical Arabic, Arabic reading and pronunciation, Qur'an
+              reading with Tajwīd, basic Arabic grammar and vocabulary-based communication.
+            </p>
+            <p data-i18n="about.islamicWork">
+              Another important area is Islamic learning. My academic training in Da’wah and Islamic Studies
+              gives me a foundation for developing educational material around Islamic knowledge,
+              particularly for families and younger learners. I aim to present learning in a structured,
+              understandable and age-appropriate way while maintaining respect for the Islamic tradition.
+            </p>
+            <p data-i18n="about.techWork">
+              Alongside education, I work with web technologies and digital tools. My technical background
+              includes Windows and Linux systems, office and productivity platforms, Google Workspace,
+              WordPress, Docker/Podman, HTML, CSS, JavaScript and modern LLM/AI tools.
+            </p>
 
-          <h3 data-i18n="about.whatIDoTitle">What I Do</h3>
-          <p class="lead" data-i18n="about.whatIDoLead">
-            My work combines educational thinking with practical digital skills. I develop ideas into usable
-            content, products and digital experiences rather than treating education, technology and creativity
-            as separate areas.
-          </p>
-          <p data-i18n="about.languageWork">
-            A major part of my work is language learning. I work with English, Arabic and Bangla and have
-            experience teaching introductory Classical Arabic, Arabic reading and pronunciation, Qur'an
-            reading with Tajwīd, basic Arabic grammar and vocabulary-based communication.
-          </p>
-          <p data-i18n="about.islamicWork">
-            Another important area is Islamic learning. My academic training in Da’wah and Islamic Studies
-            gives me a foundation for developing educational material around Islamic knowledge,
-            particularly for families and younger learners. I aim to present learning in a structured,
-            understandable and age-appropriate way while maintaining respect for the Islamic tradition.
-          </p>
-          <p data-i18n="about.techWork">
-            Alongside education, I work with web technologies and digital tools. My technical background
-            includes Windows and Linux systems, office and productivity platforms, Google Workspace,
-            WordPress, Docker/Podman, HTML, CSS, JavaScript and modern LLM/AI tools.
-          </p>
+            <h4 data-i18n="about.mainAreasTitle">My Main Areas of Work</h4>
+            <dl class="work-list">
+              <dt data-i18n="about.areaLanguageTitle">Language Learning</dt>
+              <dd data-i18n="about.areaLanguageDesc">I develop learning materials and digital experiences for people who want to learn languages in a practical and accessible way. My particular interest is in Arabic and English, including vocabulary, reading, pronunciation, grammar and basic communication.</dd>
+              <dt data-i18n="about.areaIslamicTitle">Islamic Learning</dt>
+              <dd data-i18n="about.areaIslamicDesc">I create educational ideas and resources designed to help Muslim families introduce Islamic knowledge in a clear and structured manner. This includes lessons, stories, educational activities and digital learning resources, with particular attention to younger learners.</dd>
+              <dt data-i18n="about.areaContentTitle">Educational Content & Products</dt>
+              <dd data-i18n="about.areaContentDesc">I work on scripts, educational content, learning activities and digital products. The goal is to make learning materials useful beyond a single lesson or piece of content, so that they can become part of a wider learning system.</dd>
+              <dt data-i18n="about.areaWebTitle">Web Technologies & Digital Platforms</dt>
+              <dd data-i18n="about.areaWebDesc">I am interested in building websites, web applications, learning platforms and other technology-based solutions. My experience began with practical IT and administrative work, including maintaining school websites, organising digital information and converting analogue data into digital formats.</dd>
+              <dt data-i18n="about.areaCreativeTitle">Creative Digital Solutions</dt>
+              <dd data-i18n="about.areaCreativeDesc">I also work with digital content production, image manipulation, editing and other creative workflows. My approach is to combine technical implementation with educational and visual communication so that the final product is both functional and understandable.</dd>
+              <dt data-i18n="about.areaParentingTitle">Parenting & Family Learning Resources</dt>
+              <dd data-i18n="about.areaParentingDesc">A growing area of my work is the development of guidance, tutorials and educational resources for parents. I am interested in helping parents find practical ways to support language learning, Islamic education and healthy learning habits at home.</dd>
+            </dl>
+          </div>
 
-          <h3 data-i18n="about.mainAreasTitle">My Main Areas of Work</h3>
-          <dl class="work-list">
-            <dt data-i18n="about.areaLanguageTitle">Language Learning</dt>
-            <dd data-i18n="about.areaLanguageDesc">I develop learning materials and digital experiences for people who want to learn languages in a practical and accessible way. My particular interest is in Arabic and English, including vocabulary, reading, pronunciation, grammar and basic communication.</dd>
-            <dt data-i18n="about.areaIslamicTitle">Islamic Learning</dt>
-            <dd data-i18n="about.areaIslamicDesc">I create educational ideas and resources designed to help Muslim families introduce Islamic knowledge in a clear and structured manner. This includes lessons, stories, educational activities and digital learning resources, with particular attention to younger learners.</dd>
-            <dt data-i18n="about.areaContentTitle">Educational Content & Products</dt>
-            <dd data-i18n="about.areaContentDesc">I work on scripts, educational content, learning activities and digital products. The goal is to make learning materials useful beyond a single lesson or piece of content, so that they can become part of a wider learning system.</dd>
-            <dt data-i18n="about.areaWebTitle">Web Technologies & Digital Platforms</dt>
-            <dd data-i18n="about.areaWebDesc">I am interested in building websites, web applications, learning platforms and other technology-based solutions. My experience began with practical IT and administrative work, including maintaining school websites, organising digital information and converting analogue data into digital formats.</dd>
-            <dt data-i18n="about.areaCreativeTitle">Creative Digital Solutions</dt>
-            <dd data-i18n="about.areaCreativeDesc">I also work with digital content production, image manipulation, editing and other creative workflows. My approach is to combine technical implementation with educational and visual communication so that the final product is both functional and understandable.</dd>
-            <dt data-i18n="about.areaParentingTitle">Parenting & Family Learning Resources</dt>
-            <dd data-i18n="about.areaParentingDesc">A growing area of my work is the development of guidance, tutorials and educational resources for parents. I am interested in helping parents find practical ways to support language learning, Islamic education and healthy learning habits at home.</dd>
-          </dl>
+          <!-- ── Professional Experience ── -->
+          <div id="about-experience" class="about-block">
+            <h3 data-i18n="about.experienceTitle">Professional Experience</h3>
+            <p data-i18n="about.experienceIntro">My professional experience has developed progressively across several areas.</p>
+            <p data-i18n="about.experience1">
+              I began working in administrative, typing and IT-related roles, where I handled document
+              creation, editing and organisation, digital data conversion, school website maintenance and
+              technical support. This gave me practical experience with information management and everyday
+              digital workflows.
+            </p>
+            <p data-i18n="about.experience2">
+              I also worked as a typist, computer operator and editor, assisting clients with digital data
+              and information while handling document preparation, image manipulation and printing.
+            </p>
+            <p data-i18n="about.experience3">
+              Since 2019, I have also worked through private tutoring, teaching Classical Arabic, Arabic
+              reading and pronunciation, Qur'an reading with Tajwīd, basic Arabic grammar and elementary
+              communication.
+            </p>
+            <p data-i18n="about.experience4">
+              Since September 2025, I have been working as a co-founder of Lumma Creative Studio, focusing
+              on creative and educational solutions for language learners and Muslim families.
+            </p>
+          </div>
 
-          <hr class="divider">
+          <!-- ── Lumma Creative Studio ── -->
+          <div id="about-lumma" class="about-block">
+            <h3 data-i18n="about.lummaTitle">Lumma Creative Studio</h3>
+            <p data-i18n="about.lummaIntro">Lumma Creative Studio is an important part of my current professional direction.</p>
+            <p data-i18n="about.lummaBody">
+              Through Lumma, I am working towards creating a broader ecosystem of educational and creative
+              products for Muslim families and language learners. This includes digital content, educational
+              products, scripts, learning resources and collaboration with other creative professionals.
+            </p>
+            <p data-i18n="about.lummaOutro">
+              The long-term aim is not simply to produce individual pieces of content, but to develop useful
+              educational systems and products that families can return to and use in real life.
+            </p>
+          </div>
 
-          <h3 data-i18n="about.experienceTitle">Professional Experience</h3>
-          <p data-i18n="about.experienceIntro">My professional experience has developed progressively across several areas.</p>
-          <p data-i18n="about.experience1">
-            I began working in administrative, typing and IT-related roles, where I handled document
-            creation, editing and organisation, digital data conversion, school website maintenance and
-            technical support. This gave me practical experience with information management and everyday
-            digital workflows.
-          </p>
-          <p data-i18n="about.experience2">
-            I also worked as a typist, computer operator and editor, assisting clients with digital data
-            and information while handling document preparation, image manipulation and printing.
-          </p>
-          <p data-i18n="about.experience3">
-            Since 2019, I have also worked through private tutoring, teaching Classical Arabic, Arabic
-            reading and pronunciation, Qur'an reading with Tajwīd, basic Arabic grammar and elementary
-            communication.
-          </p>
-          <p data-i18n="about.experience4">
-            Since September 2025, I have been working as a co-founder of Lumma Creative Studio, focusing
-            on creative and educational solutions for language learners and Muslim families.
-          </p>
+          <!-- ── Technical Background ── -->
+          <div id="about-tech" class="about-block">
+            <h3 data-i18n="about.techTitle">My Technical Background</h3>
+            <p data-i18n="about.techIntro">I have developed my technical skills through both professional work and independent learning. My current skill set includes:</p>
+            <ul class="tech-list">
+              <li data-i18n="about.techWeb">Web technologies: HTML, CSS, JavaScript and WordPress.</li>
+              <li data-i18n="about.techSystems">Systems and infrastructure: Windows, Linux and Docker/Podman.</li>
+              <li data-i18n="about.techProductivity">Productivity and collaboration: Microsoft Office-style office tools and Google Workspace.</li>
+              <li data-i18n="about.techCreation">Digital creation: document preparation, editing, image manipulation and digital publishing.</li>
+              <li data-i18n="about.techAI">AI and emerging technology: LLM and AI-assisted tools for research, development, content production and creative workflows.</li>
+            </ul>
+            <p data-i18n="about.techConclusion">I am particularly interested in using technology as a practical means of solving educational and communication problems.</p>
+          </div>
 
-          <hr class="divider">
+          <!-- ── Languages ── -->
+          <div id="about-languages" class="about-block">
+            <h3 data-i18n="about.languagesTitle">Languages</h3>
+            <p data-i18n="about.languages">I work across three languages: English, Arabic and Bangla. My CV records proficiency in reading, writing, listening and speaking in all three.</p>
+            <p data-i18n="about.languagesImpact">
+              This multilingual background is useful in my work because many of the projects I am
+              interested in involve Islamic education, Arabic learning, English learning and communication
+              with Bangla-speaking families.
+            </p>
+          </div>
 
-          <h3 data-i18n="about.lummaTitle">Lumma Creative Studio</h3>
-          <p data-i18n="about.lummaIntro">Lumma Creative Studio is an important part of my current professional direction.</p>
-          <p data-i18n="about.lummaBody">
-            Through Lumma, I am working towards creating a broader ecosystem of educational and creative
-            products for Muslim families and language learners. This includes digital content, educational
-            products, scripts, learning resources and collaboration with other creative professionals.
-          </p>
-          <p data-i18n="about.lummaOutro">
-            The long-term aim is not simply to produce individual pieces of content, but to develop useful
-            educational systems and products that families can return to and use in real life.
-          </p>
+          <!-- ── Academic Background ── -->
+          <div id="about-academic" class="about-block">
+            <h3 data-i18n="about.academicTitle">Academic Background</h3>
+            <p data-i18n="about.academic">
+              I am pursuing a Fazil B.A. Honours in Da’wah & Islamic Studies at Islamic Arabic University,
+              Dhaka. My academic background also includes Higher Secondary and Secondary education under
+              the Bangladesh Madrasah Education Board.
+            </p>
+            <p data-i18n="about.academicLink">
+              My academic studies are closely connected with my professional interests. Rather than keeping
+              religious studies and technology as separate fields, I am interested in using modern tools to
+              make beneficial knowledge easier to access, learn and apply.
+            </p>
+          </div>
 
-          <hr class="divider">
+          <!-- ── What I Am Building Towards ── -->
+          <div id="about-future" class="about-block">
+            <h3 data-i18n="about.futureTitle">What I Am Building Towards</h3>
+            <p data-i18n="about.futureIntro">My present work is developing towards a broader field of Islamic education, language learning, family education and technology.</p>
+            <p data-i18n="about.future1">
+              I plan to develop more structured learning platforms, websites and applications for Muslim
+              families and young learners. I am also interested in producing educational content and physical
+              or digital products that parents can use at home, as well as tutorials and practical guidance
+              that help families build better learning environments.
+            </p>
+            <p data-i18n="about.future2">
+              Another future area of professional development is tourism, travel information and
+              travel-guide services, particularly projects connected with Muslim travellers and the Umrah
+              sector. I am interested in developing useful digital information systems, guides, educational
+              resources and technology solutions in this field as my work expands.
+            </p>
+          </div>
 
-          <h3 data-i18n="about.techTitle">My Technical Background</h3>
-          <p data-i18n="about.techIntro">I have developed my technical skills through both professional work and independent learning. My current skill set includes:</p>
-          <ul class="tech-list">
-            <li data-i18n="about.techWeb">Web technologies: HTML, CSS, JavaScript and WordPress.</li>
-            <li data-i18n="about.techSystems">Systems and infrastructure: Windows, Linux and Docker/Podman.</li>
-            <li data-i18n="about.techProductivity">Productivity and collaboration: Microsoft Office-style office tools and Google Workspace.</li>
-            <li data-i18n="about.techCreation">Digital creation: document preparation, editing, image manipulation and digital publishing.</li>
-            <li data-i18n="about.techAI">AI and emerging technology: LLM and AI-assisted tools for research, development, content production and creative workflows.</li>
-          </ul>
-          <p data-i18n="about.techConclusion">I am particularly interested in using technology as a practical means of solving educational and communication problems.</p>
+          <!-- ── Approach ── -->
+          <div id="about-approach" class="about-block">
+            <h3 data-i18n="about.approachTitle">How I Approach My Work</h3>
+            <ul class="approach-list">
+              <li><strong data-i18n="about.approach1">I prefer practical work with a clear purpose. I like to understand the actual problem first, organise the information properly and then build a solution that is simple enough to use but substantial enough to be useful.</strong></li>
+              <li><strong data-i18n="about.approach2">In educational projects, I focus on clarity, structure and suitability for the intended learner. In technology projects, I value functionality, maintainability and sensible design. In creative work, I try to make the presentation serve the content rather than distract from it.</strong></li>
+              <li><strong data-i18n="about.approach3">My background in administration, IT, education, tutoring, Islamic studies and digital creativity allows me to approach projects from several perspectives at once.</strong></li>
+            </ul>
+          </div>
 
-          <hr class="divider">
-
-          <h3 data-i18n="about.languagesTitle">Languages</h3>
-          <p data-i18n="about.languages">I work across three languages: English, Arabic and Bangla. My CV records proficiency in reading, writing, listening and speaking in all three.</p>
-          <p data-i18n="about.languagesImpact">
-            This multilingual background is useful in my work because many of the projects I am
-            interested in involve Islamic education, Arabic learning, English learning and communication
-            with Bangla-speaking families.
-          </p>
-
-          <hr class="divider">
-
-          <h3 data-i18n="about.academicTitle">Academic Background</h3>
-          <p data-i18n="about.academic">
-            I am pursuing a Fazil B.A. Honours in Da’wah & Islamic Studies at Islamic Arabic University,
-            Dhaka. My academic background also includes Higher Secondary and Secondary education under
-            the Bangladesh Madrasah Education Board.
-          </p>
-          <p data-i18n="about.academicLink">
-            My academic studies are closely connected with my professional interests. Rather than keeping
-            religious studies and technology as separate fields, I am interested in using modern tools to
-            make beneficial knowledge easier to access, learn and apply.
-          </p>
-
-          <hr class="divider">
-
-          <h3 data-i18n="about.futureTitle">What I Am Building Towards</h3>
-          <p data-i18n="about.futureIntro">My present work is developing towards a broader field of Islamic education, language learning, family education and technology.</p>
-          <p data-i18n="about.future1">
-            I plan to develop more structured learning platforms, websites and applications for Muslim
-            families and young learners. I am also interested in producing educational content and physical
-            or digital products that parents can use at home, as well as tutorials and practical guidance
-            that help families build better learning environments.
-          </p>
-          <p data-i18n="about.future2">
-            Another future area of professional development is tourism, travel information and
-            travel-guide services, particularly projects connected with Muslim travellers and the Umrah
-            sector. I am interested in developing useful digital information systems, guides, educational
-            resources and technology solutions in this field as my work expands.
-          </p>
-
-          <hr class="divider">
-
-          <h3 data-i18n="about.approachTitle">How I Approach My Work</h3>
-          <ul class="approach-list">
-            <li><strong data-i18n="about.approach1">I prefer practical work with a clear purpose. I like to understand the actual problem first, organise the information properly and then build a solution that is simple enough to use but substantial enough to be useful.</strong></li>
-            <li><strong data-i18n="about.approach2">In educational projects, I focus on clarity, structure and suitability for the intended learner. In technology projects, I value functionality, maintainability and sensible design. In creative work, I try to make the presentation serve the content rather than distract from it.</strong></li>
-            <li><strong data-i18n="about.approach3">My background in administration, IT, education, tutoring, Islamic studies and digital creativity allows me to approach projects from several perspectives at once.</strong></li>
-          </ul>
-
-          <hr class="divider">
-
-          <h3 data-i18n="about.personalTitle">A More Personal Introduction</h3>
-          <p data-i18n="about.personal">
-            I am interested in learning how things work and then finding practical ways to turn that
-            knowledge into something useful. My interests have naturally brought together languages,
-            Islamic studies, education, computers and creative technology.
-          </p>
-          <p data-i18n="about.personal2">
-            I started with practical digital and administrative work, gradually developed technical
-            skills, continued my studies in Da’wah and Islamic Studies, and began teaching Arabic and
-            Qur'an alongside my other work. Over time, these areas began to converge.
-          </p>
-          <p data-i18n="about.personal3">
-            Today, I am focused on building educational and digital solutions for Muslim families and
-            language learners. Through my work with Lumma Creative Studio and my independent projects,
-            I am developing content, products, websites and learning concepts that connect traditional
-            learning with contemporary technology.
-          </p>
-          <p data-i18n="about.personal4">
-            My longer-term goal is to build useful, reliable and well-designed educational and
-            information platforms serving Muslim families, learners and travellers across different parts
-            of the world.
-          </p>
-          <p class="positioning" data-i18n="about.positioning">
-            **Language & Islamic Education Specialist | Educational Content Creator | Digital Product Builder | Web & Technology Enthusiast | Co-Founder, Lumma Creative Studio**
-          </p>
-
-          <div class="about-actions">
-            <a class="button button-ghost cv-btn" href="assets/documents/cv-hasan.pdf" download data-i18n="about.cvBtn">Download CV</a>
-            <a class="button button-secondary" href="#contact" data-i18n="about.contactBtn">Get in touch</a>
+          <!-- ── Personal ── -->
+          <div id="about-personal" class="about-block">
+            <h3 data-i18n="about.personalTitle">A More Personal Introduction</h3>
+            <p data-i18n="about.personal">
+              I am interested in learning how things work and then finding practical ways to turn that
+              knowledge into something useful. My interests have naturally brought together languages,
+              Islamic studies, education, computers and creative technology.
+            </p>
+            <p data-i18n="about.personal2">
+              I started with practical digital and administrative work, gradually developed technical
+              skills, continued my studies in Da’wah and Islamic Studies, and began teaching Arabic and
+              Qur'an alongside my other work. Over time, these areas began to converge.
+            </p>
+            <p data-i18n="about.personal3">
+              Today, I am focused on building educational and digital solutions for Muslim families and
+              language learners. Through my work with Lumma Creative Studio and my independent projects,
+              I am developing content, products, websites and learning concepts that connect traditional
+              learning with contemporary technology.
+            </p>
+            <p data-i18n="about.personal4">
+              My longer-term goal is to build useful, reliable and well-designed educational and
+              information platforms serving Muslim families, learners and travellers across different parts
+              of the world.
+            </p>
+            <p class="positioning" data-i18n="about.positioning">
+              **Language & Islamic Education Specialist | Educational Content Creator | Digital Product Builder | Web & Technology Enthusiast | Co-Founder, Lumma Creative Studio**
+            </p>
+            <div class="about-actions">
+              <a class="button button-ghost cv-btn" href="assets/documents/cv-hasan.pdf" download data-i18n="about.cvBtn">Download CV</a>
+              <a class="button button-secondary" href="#contact" data-i18n="about.contactBtn">Get in touch</a>
+            </div>
           </div>
         </div>
       </div>
@@ -292,7 +314,7 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-number" data-i18n="skills.number">02 / Skills</p>
-          <h2 data-i18n="skills.title">Areas of teaching and practice.</h2>
+          <h2 data-i18n="skills.title">Areas of Practice</h2>
         </div>
 
         <div class="skills-grid">
@@ -318,8 +340,13 @@
           </article>
           <article class="skill-card">
             <span class="skill-index">05</span>
-            <h3 data-i18n="skills.s5.title">Islamic Script-writing</h3>
+            <h3 data-i18n="skills.s5.title">Islamic Digital Contents</h3>
             <p data-i18n="skills.s5.desc">Writing and developing educational content for Islamic subjects.</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-index">06</span>
+            <h3 data-i18n="skills.s6.title">Creative Learning Solutions</h3>
+            <p data-i18n="skills.s6.desc">Designing practical learning experiences that combine education, technology, and creative workflows.</p>
           </article>
         </div>
       </div>
